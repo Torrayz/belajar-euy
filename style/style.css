@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+.invoice {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.invoice h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.invoice-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Mengatur kolom */
+  gap: 10px;
+}
+
+.invoice-details label,
+.invoice-details p {
+  margin: 5px 0;
+}
+
+.invoice-details label {
+  font-weight: bold;
+}
+
+/* Memberi efek seperti border pada elemen */
+.invoice-details p {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* Mengatur lebar kolom label */
+.invoice-details label {
+  display: inline-block;
+  width: 150px;
+}

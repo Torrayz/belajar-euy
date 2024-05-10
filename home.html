@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+	<link rel="stylesheet" href="style/home.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">
+      Registrasi Mahasiswa PETARUNG
+    </div>
+    <div class="form">
+       <div class="inputfield">
+          <label>Nama</label>
+          <input type="text" id="nama"  class="input">
+       </div>  
+        <div class="inputfield">
+          <label>NIM</label>
+          <input type="number" id="nim" class="input">
+       </div>  
+       <div class="inputfield">
+        <label for="fakultas">Fakultas</label>
+        <div class="custom_select">
+            <select id="fakultas">
+                <option value="" disabled selected>Pilih Fakultas</option>
+                <option value="TEKNIK">Teknik</option>
+                <option value="HUKUM">Hukum</option>
+                <option value="EKONOMI">Ekonomi</option>
+                <option value="SASTRA">Sastra</option>
+                <option value="ILMU SOSIAL">Ilmu Sosial</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="inputfield" id="jurusanContainer" style="display: none;">
+        <label for="jurusan">Jurusan</label>
+        <div class="custom_select">
+            <select id="jurusan">
+                <option value="" disabled selected>Pilih Jurusan</option>
+            </select>
+        </div>
+    </div>
+    
+      <div class="inputfield">
+          <label>SKS WAJIB</label>
+          <input type="number" id="sks" class="input">
+       </div> 
+        <div class="inputfield">
+          <label>Prodi</label>
+          <input type="text" id="prodi" class="input">
+          </div>
+          <div class="inputfield">
+            <label for="biayaPerSks">Biaya Per SKS</label>
+            <input type="number" id="biayaPerSks" class="input">
+        </div> 
+        <div class="inputfield">
+            <label for="dpp">DPP</label>
+            <input type="number" id="dpp" class="input">
+        </div> 
+        <div class="inputfield">
+            <label for="spp">SPP</label>
+            <input type="number" id="spp" class="input">
+        </div> 
+        <div class="inputfield">
+            <label for="totalBiayaPersemester">Total Biaya Persemester</label>
+            <input type="text" id="totalBiayaPersemester" class="input" readonly>
+            <button class="input" onclick="hitungTotalBiaya()">Hitung Total Biaya</button>
+
+        </div> 
+        
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p>Agreed to terms and conditions</p>
+       </div> 
+      <div class="inputfield">
+        <input type="submit" value="Register" class="btn" onclick="saveFormData()">
+      </div>
+    </div>
+</div>	
+<script src="scripts/home.js"></script>
+</body>
+</html>
