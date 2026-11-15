@@ -1,0 +1,19 @@
+name: PETARUNG checks
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JavaScript
+        run: |
+          node --check scripts/login.js
+          node --check scripts/home.js
+          node --check scripts/invoice.js
+      - name: Check required pages
+        run: test -f index.html && test -f home.html && test -f invoice.html && test -f preview.html
